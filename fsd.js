@@ -1,2 +1,7 @@
-var a=[];
-console.log(a instanceof Array) //返回true 
+var a = function () {
+    
+}
+
+var b = a;
+
+console.log(a === b);

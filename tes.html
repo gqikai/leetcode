@@ -8,6 +8,7 @@
             background-color: antiquewhite;
             line-height: 20px;
         }
+
         p {
             background-color: hotpink;
             line-height: 150px;
@@ -15,10 +16,20 @@
     </style>
 </head>
 <body>
-<p>
-    <a>
-        Lorem ipsum dolor sit amet,consectetur adipisicing elit. At beatae culpa, deleniti ex excepturi impedit ipsam, laudantium maxime<br/> nesciunt similique sint sunt vel vitae! Aliquam libero maxime repellendus ut voluptates.
-    </a>
-</p>
+<body onclick="alert('current is body');">
+<div id="div0" onclick="alert('current is '+this.id)">
+    <div id="div1" onclick="alert('current is '+this.id)">
+
+        <div id="div2" onclick="alert('current is '+this.id)">
+
+            <div id="event_source" onclick="alert('current is '+this.id)"
+                 style="height:200px;width:200px;background-color:red;"></div>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
 </body>
 </html>
