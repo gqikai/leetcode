@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+
+</head>
+
+<body onclick="alert('current is body');">
+<div id="div0" onclick="alert('current is '+this.id)">
+    <div id="div1" onclick="alert('current is '+this.id)">
+        <div id="div2" onclick="alert('current is '+this.id)">
+            <div id="event_source" onclick="alert('current is '+this.id)"
+                 style="height:200px;width:200px;background-color:red;"></div>
+        </div>
+    </div>
+</div>
+<script src="../bower_components/requirejs/require.js" data-main="../js/main"></script>
+<script>
+    ;(function(){
+        require(['EventUtil'], function (EventUtil) {
+            var source = document.getElementById('event_source');
+            EventUtil.addHandler(source,'click', function (event) {
+                console.log('called');
+                EventUtil.stopPropagation(event);
+            });
+        });
+    })();
+</script>
+</body>
+</html>
