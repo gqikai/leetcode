@@ -3,33 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+
+    </style>
 </head>
 <body>
-
+<div id="img" class="Absolute-Center">hello</div>
 <script>
-    var rows = 10;
-    var oBody = document.getElementsByTagName('body')[0];
-    var oTbody = document.createElement('tbody');
-    oBody.appendChild(oTbody);
 
-    var renderedRows = 0;
-
-    setTimeout(function renderARow() {
-        var oTr = document.createElement('tr');
-        for(var j = 0; j < 6000; j ++){
-            oTd = document.createElement('td');
-            oTd.appendChild(document.createTextNode(renderedRows + ',' + j));
-            oTr.appendChild(oTd);
-        }
-        oTbody.appendChild(oTr);
-        renderedRows ++;
-        if(renderedRows < rows){
-            setTimeout(renderARow,0);
-        }
-    },0)
-
-
-
+    var v = 'Hello World';
+    (function () {
+        alert(v);
+        function v(){}
+    })()
 </script>
 </body>
 </html>
