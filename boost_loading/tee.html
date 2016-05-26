@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var onmessage = function (event) {
+        var data = event.data;
+        var origin = event.origin;
+        //do someing
+        console.log(event);
+    };
+    if (typeof window.addEventListener != 'undefined') {
+        window.addEventListener('message', onmessage, false);
+    } else if (typeof window.attachEvent != 'undefined') {
+        //for ie
+        window.attachEvent('onmessage', onmessage);
+    }
+</script>
+</body>
+</html>

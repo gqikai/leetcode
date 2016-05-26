@@ -1,4 +1,4 @@
-;define(function () {
+define(function () {
 
     var EventUtil = {
         addHandler: function (element, type, handler) {

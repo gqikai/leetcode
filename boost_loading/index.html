@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var otherWindow = window.open('http://localhost:63343/leetcode/boost_loading/tee.html');
+    setInterval(function () {
+        otherWindow.postMessage('hello', '*');
+    }, 1000);
+
+</script>
+</body>
+</html>

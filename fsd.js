@@ -1,6 +1,1 @@
-
-var v = 'Hello World';
-(function () {
-    console.log(v);
-    var v = function(){}
-})()
+console.log('abs'.length());
